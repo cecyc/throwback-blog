@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+import MarkdownPostsLayout from "../../layouts/MarkdownPostsLayout.astro";
+
+export const prerender = true;
+export async function getStaticPaths() {
+    const talks = await getCollection("talks");
+    return talks.map((talk) => ({
+        params: { slug: talk.slug },
+        props: { talk },
+    }));
+}
+
+const { talk } = Astro.props;
+const { Content } = await talk.render();
+---
+
+<MarkdownPostsLayout frontmatter={talk.data}>
+    <iframe
+      width="560"
+      height="315"
+      src={`https://www.youtube.com/embed/${talk.data.youtubeId}`}
+      title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  
+    <Content />
+  </MarkdownPostsLayout>

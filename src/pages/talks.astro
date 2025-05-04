@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+const allTalks = await getCollection("talks");
+---
+
+<Layout title="Talks">
+    <h2>Talks</h2>
+		<ul class="all-posts">
+			{
+				allTalks
+					.sort((a: any, b: any) => b.data.publishDate - a.data.publishDate)
+					.map((talk: any, index: number) => (
+						<li>
+							[{talk.data.conference}]
+							<a href={`/talks/${talk.slug}`}>
+								{talk.data.title}
+							</a>
+						</li>
+					))
+				}		
+			</ul>
+</Layout>

@@ -1,0 +1,150 @@
+body {
+	background-color: black;
+	text-align: center;
+	color: white;
+}
+
+main {
+	margin: 0 auto;
+	max-width: 800px;
+	min-width: 30%;
+	padding: 1rem;
+	text-align: left;
+}
+
+p {
+	font-size: 1.15em;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+ul {
+	list-style-position: inside;
+	list-style-type: disc;
+	padding-left: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4 {
+	color: aqua;
+}
+
+a:link {
+	color: violet;
+}
+a:visited {
+	color: violet;
+}
+a:hover {
+	color: purple;
+}
+
+table {
+	background-color: aliceblue;
+	margin: 2rem auto;
+	border: 4px groove lightgrey;
+}
+
+th, td {
+  border: 1px solid lightgrey;
+  padding: 0.5rem 1rem;
+}
+
+hr {
+	border: 4px groove lightgrey;
+	margin: 2rem auto;
+	width: 75%;
+}
+
+.nav {
+	font-weight: bold;
+}
+
+/* HOME STYLES */
+
+.tagline h1 {
+	font-size: 3em;
+	margin-bottom: 0;
+}
+
+.tagline p {
+	margin-top: 0;
+	font-style: italic;
+	font-size: 1.2em;
+}
+
+.home {
+	text-align: center;
+}
+
+/* BLOG STYLES */
+
+.latest-posts ul {
+	list-style-image: url('/sparky.gif');
+}
+
+.latest-posts li {
+	font-size: 1.25em;
+	margin-bottom: 0.5rem;
+}
+
+.all-posts li {
+	font-size: 1.15em;
+	font-family: 'Courier New', Courier, monospace;
+	text-align: left;
+	margin-bottom: 0.5rem;
+}
+
+/* MARKDOWN POSTS STYLES */
+
+pre {
+	background-color: gray;
+	color: greenyellow;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 1.15em;
+	border: 1px solid lightgrey;
+	border-radius: 5px;
+	padding: 0.5rem;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+pre code {
+  display: inline-block;
+  min-width: 100%;
+}
+
+.markdown img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.markdown li {
+	font-size: 1.15em;
+	font-family: 'Courier New', Courier, monospace;
+	text-align: left;
+	margin-bottom: 0.5rem;
+	margin-left: 1rem;
+}
+
+.markdown h2 {
+	font-weight: bold;
+}
+
+.markdown h3 {
+	text-transform: uppercase;
+}
+
+blockquote {
+	font-style: italic;
+	border-left: 4px solid magenta;
+	padding: 1rem 1.5rem;
+	margin: 1.5rem auto;
+	max-width: 600px;
+}
+  
+blockquote p {
+	margin: 0;
+}
+  

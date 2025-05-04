@@ -1,0 +1,24 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+const allPosts = await getCollection("blog");
+---
+
+<Layout title="Blog">
+    <h2>Blog</h2>
+		<ul class="all-posts">
+			{
+				allPosts
+					.sort((a: any, b: any) => b.data.publishDate - a.data.publishDate)
+					.map((post: any, index: number) => (
+						<li>
+							<a href={`/blog/${post.slug}`}>
+								{post.data.title}
+							</a>
+							<span>- {post.data.publishDate.toDateString()}</span>
+							{index === 0 && <img src="/new-turn.gif" />}
+						</li>
+					))
+				}		
+			</ul>
+</Layout>
