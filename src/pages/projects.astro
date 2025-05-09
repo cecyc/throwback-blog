@@ -1,0 +1,37 @@
+---
+import ProjectsLayout from "../layouts/ProjectsLayout.astro";
+import { getCollection } from "astro:content";
+const projects = await getCollection("projects");
+---
+
+<ProjectsLayout>
+	<div class="projects">
+		<h1>Greetings adventurer!</h1>
+		<img width="100" src="/8bit-octocat.gif" class="octocat" alt="A floating Octocat greets you!" />
+		<h2>Choose your path:</h2>
+		<div class="project-list">
+			{
+				projects
+					.sort((a: any, b: any) => b.data.completionYear - a.data.completionYear)
+					.slice(0, 3) // limit to 3 projects
+					.map((project: any, index: number) => (
+						<div class="project-card">
+							<a href={`/projects/${project.slug}`}>
+								<h3>{project.data.title}</h3>
+								<p>Completed in {project.data.completionYear} - {project.data.readingTime} read</p>
+								<div class="tags">
+									{project.data.tags.map((tag: string) => (
+										<span class="tag">{tag}</span>
+									))}
+            		</div>
+							</a>
+						</div>
+					))
+			}
+		</div>
+		<div class="back">
+			<p>This page is not accessible from the main page, fyi.<br>When you're ready to go back, just be sure ok?</p>
+			<a href="/">Go home</a>
+		</div>
+	</div>
+</ProjectsLayout>

@@ -1,0 +1,21 @@
+---
+const { frontmatter } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cey Correa | Projects | {frontmatter.title}</title>
+    <link rel="stylesheet" href="/styles/project-markdown.css" />
+  </head>
+  <body>
+    <div class="markdown">
+      <div class="main">
+        <span>{frontmatter.company}</span>
+        <h1>{frontmatter.title}</h1>
+        <slot />
+        <a class="back" href="/projects">&lt;&lt;Back to projects</a>
+      </div>
+    </div>
+  </body>
+</html>

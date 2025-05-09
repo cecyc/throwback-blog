@@ -1,0 +1,96 @@
+body {
+  background-image: url("../sparkle.gif");
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.projects {
+  width: 75%;
+  max-width: 800px;
+  min-width: 30%;
+  border: 1px dashed greenyellow;
+  background: black;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h1, h2, p, ul, li {
+  color: greenyellow;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h3 {
+	color: violet;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+a:link {
+	color: greenyellow;
+}
+
+a:visited {
+	color: greenyellow;
+}
+
+a:hover {
+	color: greenyellow;
+}
+
+.octocat {
+  align-self: center;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* spacing between cards */
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.project-card {
+  border: 1px solid greenyellow;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  margin-bottom: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tag {
+  background-color: greenyellow;
+  color: black;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.back {
+  text-align: center;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}

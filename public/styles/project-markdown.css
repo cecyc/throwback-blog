@@ -1,0 +1,89 @@
+body {
+  background-color: #000;
+  color: whitesmoke;
+  margin: 0;
+}
+
+.main {
+	border: 1px dashed greenyellow;
+  width: 80%;
+	max-width: 950px;
+	min-width: 30%;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+h1, h2, h3 {
+  color: greenyellow;
+}
+
+h1 {
+  font-size: 3em;
+  margin-top: 1rem;
+}
+
+span {
+  background-color: greenyellow;
+  color: black;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.25em;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 1.25em;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+p, li {
+	font-size: 1.15em;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+  color: greenyellow;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: greenyellow;
+	text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+pre {
+  background: black;
+  color: greenyellow;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+blockquote {
+  border-left: 4px solid violet;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  color: violet;
+  font-style: italic;
+}
+
+.back {
+	text-transform: uppercase;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 1.15em;
+}
