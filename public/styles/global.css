@@ -1,5 +1,5 @@
 body {
-	background-color: black;
+	background-image: url('/sparkle.gif');
 	text-align: center;
 	color: white;
 }
@@ -10,6 +10,8 @@ main {
 	min-width: 30%;
 	padding: 1rem;
 	text-align: left;
+	background-color: black;
+	border: 1px dashed violet;
 }
 
 p {
@@ -23,25 +25,35 @@ ul {
 	padding-left: 0;
 	margin: 0;
 }
+  
+h1, h2, p, ul, li {
+	font-family: 'Courier New', Courier, monospace;
+}
 
-h1, h2, h3, h4 {
-	color: aqua;
+p {
+  color: white;
+}
+
+h1, h2 {
+	color: violet;
 }
 
 a:link {
-	color: violet;
+	color: aqua;
 }
+
 a:visited {
-	color: violet;
+	color: aqua;
 }
+
 a:hover {
-	color: purple;
+	color: aqua;
 }
 
 table {
-	background-color: aliceblue;
+	background-color: black;
 	margin: 2rem auto;
-	border: 4px groove lightgrey;
+	border: 4px groove black;
 }
 
 th, td {
@@ -63,7 +75,7 @@ hr {
 
 .tagline h1 {
 	font-size: 3em;
-	margin-bottom: 0;
+	margin-bottom: 0.5rem;
 }
 
 .tagline p {
@@ -72,14 +84,21 @@ hr {
 	font-size: 1.2em;
 }
 
-.home {
-	text-align: center;
+.home ul {
+  text-align: left;
+}
+
+.pill {
+  background-color: aqua;
+  color: black;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
 }
 
 /* BLOG STYLES */
 
 .latest-posts ul {
-	list-style-image: url('/sparky.gif');
+	list-style-type: disc;
 }
 
 .latest-posts li {
@@ -103,10 +122,10 @@ pre {
 	font-size: 1.15em;
 	border: 1px solid lightgrey;
 	border-radius: 5px;
-	padding: 0.5rem;
+  padding: 0.5rem;
   overflow-x: auto;
   white-space: pre;
-}
+} 
 
 pre code {
   display: inline-block;
@@ -128,8 +147,13 @@ pre code {
 	margin-left: 1rem;
 }
 
+.markdown h2, h3 {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .markdown h2 {
 	font-weight: bold;
+  color: aqua;
 }
 
 .markdown h3 {
